@@ -1,3 +1,6 @@
+//Bryan Zhong
+//Blink LED1 (PA5) at a visible rate using the XOR bitwise operator to toggle the LED.
+
 #if 1
 
 #define RCC_BASE 0x40021000
