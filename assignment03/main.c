@@ -1,5 +1,15 @@
 //Bryan Zhong
-//Blink LED1 (PA5) at a visible rate using the XOR bitwise operator to toggle the LED.
+//Blink LED1 (PA5) in Morse Code to spell "Bryan".
+//3on, 1on, 1on, 1on
+//3off
+//1on, 3on, 1on
+//3off
+//3on, 1on, 3on, 3on
+//3off
+//1on, 3on
+//3off
+//3on, 1on
+//off end
 
 #if 1
 
@@ -31,24 +41,250 @@ void main(void)
     while(1)
     {
         
-        /*
+        //// Letter B
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
         counter = 0;
         while (counter < 100000)
         {
             counter++;
         }
         
-        // |= bitwise operator to specifically set bit[5] to 1 (ORD5 is 10 0000)
-        GPIOA_ODR |= ORD5 ; // GPIOA_ODR: Turn LED1 (PA5) on
-        */
-        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
         counter = 0;
         while (counter < 100000)
         {
             counter++;
         }
-        // ~ORD5 is 01 1111. Use &= bitwise operator to mirror every original bit except for bit[5] which is 0.
-        GPIOA_ODR ^= ORD5; // GPIOA_ODR: Turn LED1 (PA5) off (bit 5 is 0)
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 3 units (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        ////Letter R
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 3 units (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        ////Letter Y
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 3 units (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        ////Letter A
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 3 units (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        ////Letter N
+        // GPIOA_ODR: Turn LED1 (PA5) on for 3 units (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 1 unit (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+
+        // GPIOA_ODR: Turn LED1 (PA5) on for 1 unit (bit 5 is 1)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 100000)
+        {
+            counter++;
+        }
+        
+        // GPIOA_ODR: Turn LED1 (PA5) off for 3 units (bit 5 is 0)
+        GPIOA_ODR ^= ORD5;
+        counter = 0;
+        while (counter < 3*100000)
+        {
+            counter++;
+        }
     }
 }
 #endif
